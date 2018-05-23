@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="NativeXtraReportExample" Logo="ExpressAppLogo">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" ImageMode="UseItemImage" />
+    </Actions>
+  </ActionDesign>
+  <BOModel></BOModel>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="12.2.8.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views></Views>
+</Application>
