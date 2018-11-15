@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[ShowXtraReportController.cs](./CS/NativeXtraReportExample.Module.Win/Controllers/ShowXtraReportController.cs) (VB: [ShowXtraReportController.vb](./VB/NativeXtraReportExample.Module.Win/Controllers/ShowXtraReportController.vb))**
+<!-- default file list end -->
 # How to: Show an XtraReport created at design time, without the use of XAF Reports module
 
 
