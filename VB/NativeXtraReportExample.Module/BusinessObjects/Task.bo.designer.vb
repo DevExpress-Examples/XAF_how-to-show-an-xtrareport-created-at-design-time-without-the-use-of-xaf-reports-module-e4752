@@ -6,6 +6,10 @@
 '     the code is regenerated.
 ' </auto-generated>
 '------------------------------------------------------------------------------
+
+Imports Microsoft.VisualBasic
+Imports System
+Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
 Imports DevExpress.ExpressApp.DC
@@ -15,38 +19,37 @@ Imports DevExpress.Xpo
 Namespace NativeXtraReportExample.Module.BusinessObjects
   <DefaultClassOptions, DevExpress.Persistent.Base.ImageNameAttribute("BO_Task"), DevExpress.ExpressApp.DC.XafDefaultPropertyAttribute("Subject")> _
   Partial Public Class Task
-      Inherits DevExpress.Persistent.BaseImpl.BaseObject
-
-    Private _deadline As Date
-    Private _description As System.String
-    Private _subject As System.String
-    Public Sub New(ByVal session As DevExpress.Xpo.Session)
-        MyBase.New(session)
-    End Sub
-    Public Property Subject() As System.String
-      Get
-        Return _subject
-      End Get
-      Set(ByVal value As System.String)
-        SetPropertyValue("Subject", _subject, value)
-      End Set
-    End Property
-    Public Property Deadline() As Date
-      Get
-        Return _deadline
-      End Get
-      Set(ByVal value As Date)
-        SetPropertyValue("Deadline", _deadline, value)
-      End Set
-    End Property
-    <DevExpress.Xpo.SizeAttribute(-1)> _
-    Public Property Description() As System.String
-      Get
-        Return _description
-      End Get
-      Set(ByVal value As System.String)
-        SetPropertyValue("Description", _description, value)
-      End Set
-    End Property
+	  Inherits DevExpress.Persistent.BaseImpl.BaseObject
+	Private _deadline As System.DateTime
+	Private _description As System.String
+	Private _subject As System.String
+	Public Sub New(ByVal session As DevExpress.Xpo.Session)
+		MyBase.New(session)
+	End Sub
+	Public Property Subject() As System.String
+	  Get
+		Return _subject
+	  End Get
+	  Set(ByVal value As System.String)
+		SetPropertyValue("Subject", _subject, value)
+	  End Set
+	End Property
+	Public Property Deadline() As System.DateTime
+	  Get
+		Return _deadline
+	  End Get
+	  Set(ByVal value As System.DateTime)
+		SetPropertyValue("Deadline", _deadline, value)
+	  End Set
+	End Property
+	<DevExpress.Xpo.SizeAttribute(-1)> _
+	Public Property Description() As System.String
+	  Get
+		Return _description
+	  End Get
+	  Set(ByVal value As System.String)
+		SetPropertyValue("Description", _description, value)
+	  End Set
+	End Property
   End Class
 End Namespace
