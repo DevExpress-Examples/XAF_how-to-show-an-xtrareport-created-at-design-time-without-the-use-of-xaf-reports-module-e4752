@@ -1,10 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeXtraReportExample.Win", "NativeXtraReportExample.Win\NativeXtraReportExample.Win.csproj", "{79B5CEE3-10DF-4E1E-A02A-D28220CC0D5D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeXtraReportExample.Module", "NativeXtraReportExample.Module\NativeXtraReportExample.Module.csproj", "{D6EB651C-2785-46A6-9973-29FBB2170BCA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeXtraReportExample.Module.Win", "NativeXtraReportExample.Module.Win\NativeXtraReportExample.Module.Win.csproj", "{60DC0114-24B0-4331-B21C-7906D5BFF008}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeXtraReportExample.Win", "NativeXtraReportExample.Win\NativeXtraReportExample.Win.csproj", "{79B5CEE3-10DF-4E1E-A02A-D28220CC0D5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
