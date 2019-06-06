@@ -34,7 +34,7 @@ Namespace NativeXtraReportExample.Module.Win.Controllers
 		Private Sub showReportWithParameters_CustomizePopupWindowParams(ByVal sender As Object, ByVal e As CustomizePopupWindowParamsEventArgs)
 			e.DialogController.CanCloseWindow = False
 			e.DialogController.AcceptAction.Caption = "Preview"
-			Dim objectSpace = Application.CreateObjectSpace()
+			Dim objectSpace = Application.CreateObjectSpace(GetType(ReportParameters))
 			Dim parameters = New ReportParameters() With {.DeadlineBefore = DateTime.Now}
 			e.View = Application.CreateDetailView(objectSpace, parameters)
 		End Sub
@@ -44,7 +44,7 @@ Namespace NativeXtraReportExample.Module.Win.Controllers
 			If (Not String.IsNullOrEmpty(parameters.SubjectContains)) Then
 				criteria = GroupOperator.Combine(GroupOperatorType.And, criteria, CriteriaOperator.Parse("Contains([Subject], ?)", parameters.SubjectContains))
 			End If
-			Dim dataSource = Application.CreateObjectSpace().CreateCollection(GetType(Task), criteria)
+			Dim dataSource = Application.CreateObjectSpace(GetType(Task)).CreateCollection(GetType(Task), criteria)
 			Dim report = New TaskReport()
 			report.DataSource = dataSource
 			report.ShowPreview()
