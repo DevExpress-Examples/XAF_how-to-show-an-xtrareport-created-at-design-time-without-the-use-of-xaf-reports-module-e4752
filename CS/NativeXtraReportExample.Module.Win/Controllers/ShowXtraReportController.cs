@@ -32,7 +32,7 @@ namespace NativeXtraReportExample.Module.Win.Controllers {
         void showReportWithParameters_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e) {
             e.DialogController.CanCloseWindow = false;
             e.DialogController.AcceptAction.Caption = "Preview";
-            var objectSpace = Application.CreateObjectSpace();
+            var objectSpace = Application.CreateObjectSpace(typeof(ReportParameters));
             var parameters = new ReportParameters() { DeadlineBefore = DateTime.Now };
             e.View = Application.CreateDetailView(objectSpace, parameters);
         }
@@ -43,7 +43,7 @@ namespace NativeXtraReportExample.Module.Win.Controllers {
                 criteria = GroupOperator.Combine(GroupOperatorType.And, criteria,
                     CriteriaOperator.Parse("Contains([Subject], ?)", parameters.SubjectContains));
             }
-            var dataSource = Application.CreateObjectSpace().CreateCollection(typeof(Task), criteria);
+            var dataSource = Application.CreateObjectSpace(typeof(Task)).CreateCollection(typeof(Task), criteria);
             var report = new TaskReport();
             report.DataSource = dataSource;
             report.ShowPreview();
